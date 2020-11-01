@@ -14,8 +14,11 @@
       <ion-label position="floating">Peso</ion-label>
       <ion-input type="number" [(ngModel)]="imc.peso"></ion-input>
     </ion-item>
-    <ion-button class="button" expand="block" (click)="calcular();"> Calcular</ion-button>
-    <div>{{resultado}}</div>
+    <ion-button class="button" expand="block" (click)="calcular();">
+      <ion-text color="light"> Calcular</ion-text>
+    </ion-button>
+    <div class="resultado" *ngIf="resultado > 0 ">Seu imc é: <ion-text color="primary">{{resultado}} Kg/m²</ion-text>
+    </div>
   </div>
 
 </ion-content>
